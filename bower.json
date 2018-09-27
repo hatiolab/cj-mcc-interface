@@ -1,0 +1,52 @@
+{
+  "name": "mcc-interface",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Stellan Gil <lotstar87@users.noreply.github.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "things-board-integration": "hatiolab/things-board-integration",
+    "things-scene": "npm:@hatiolab/things-scene#^2.2.62",
+    "things-scene-forklift": "npm:@things-scene/forklift",
+    "things-scene-person": "npm:@things-scene/person",
+    "things-scene-gauge": "npm:@things-scene/gauge",
+    "things-scene-progressbar": "npm:@things-scene/progressbar",
+    "things-scene-clock": "npm:@things-scene/clock",
+    "things-scene-indoor-map": "npm:@things-scene/indoor-map#^2.3.2",
+    "things-scene-tab": "npm:@things-scene/tab#^2.3.1",
+    "things-scene-compass": "npm:@things-scene/compass",
+    "things-scene-half-roundrect": "npm:@things-scene/half-roundrect",
+    "things-scene-viewer": "ThingsElements/things-scene-viewer#^2.0.0",
+    "chart.js": "npm:/chart.js#2.4.0",
+    "tinycolor2": "npm:/tinycolor2",
+    "things-scene-chartjs": "npm:@things-scene/chartjs",
+    "things-scene-marker": "npm:@things-scene/marker",
+    "things-scene-table": "npm:@things-scene/table",
+    "things-scene-wheel-sorter": "npm:@things-scene/wheel-sorter",
+    "things-scene-clone": "npm:@things-scene/clone",
+    "things-scene-slam": "npm:@things-scene/slam",
+    "things-scene-firebase": "npm:@things-scene/firebase",
+    "things-scene-stomp": "npm:@things-scene/stomp",
+    "things-scene-mqtt": "npm:@things-scene/mqtt",
+    "things-scene-restful": "npm:@things-scene/restful",
+    "things-scene-random": "npm:@things-scene/random",
+    "things-scene-form": "npm:@things-scene/form#^0.3.2",
+    "things-scene-google-map": "npm:@things-scene/google-map",
+    "heatmap.js": "npm:/heatmap.js",
+    "things-scene-visualizer": "npm:@things-scene/visualizer#^0.5.7",
+    "things-scene-legend": "npm:@things-scene/legend",
+    "things-scene-echart": "npm:@things-scene/echart",
+    "things-scene-traffic": "npm:@things-scene/traffic",
+    "webfontloader": "^1.6.28"
+  }
+}

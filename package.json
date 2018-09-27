@@ -1,0 +1,9 @@
+{
+  "name": "mcc-interface",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "bower-npm-resolver": "^0.9.1"
+  }
+}
