@@ -47,6 +47,8 @@
     "things-scene-legend": "npm:@things-scene/legend",
     "things-scene-echart": "npm:@things-scene/echart",
     "things-scene-traffic": "npm:@things-scene/traffic",
-    "webfontloader": "^1.6.28"
+    "webfontloader": "^1.6.28",
+    "stomp-websocket": "^2.3.4",
+    "sockjs": "^0.3.4"
   }
 }

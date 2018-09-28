@@ -30,6 +30,8 @@
 
   <script src="/licenses/things-lic.js"></script>
   <script src="./bower_components/webfontloader/webfontloader.js"></script>
+  <script src="./bower_components/sockjs/sockjs.min.js"></script>
+  <script src="./bower_components/stomp-websocket/lib/stomp.min.js"></script>
 
   <script src="./bower_components/things-scene/things-scene-min.js"></script>
   <script src="./bower_components/chart.js/dist/Chart.min.js"></script>
@@ -60,6 +62,7 @@
   <script src="./bower_components/things-scene-visualizer/dist/things-scene-visualizer.js"></script>
   <script src="./bower_components/things-scene-wheel-sorter/dist/things-scene-wheel-sorter.js"></script>
   <script src="./bower_components/things-board-integration/things-board-integration.js"></script>
+  <script src="./stomp.js"></script>
   <script src="./font-loader.js"></script>
   <script src="./integrate.js"></script>
 
@@ -73,8 +76,8 @@
 
     var queryString = location.search;
 
-    var searchParams 
-    if(queryString)
+    var searchParams
+    if (queryString)
       searchParams = new URLSearchParams(queryString);
 
     var center = searchParams.get('center')
@@ -96,17 +99,17 @@
 
     var fontApiURL = new URL('/rest/fonts', baseURL)
 
-    fetch(apiURL, options).then((response)=> {
+    fetch(apiURL, options).then((response) => {
       var contentType = response.headers.get("content-type");
-      if(contentType && contentType.indexOf("application/json") !== -1) {
-        response.json().then(function(json) {
+      if (contentType && contentType.indexOf("application/json") !== -1) {
+        response.json().then(function (json) {
           integrate({
             target: 'scene-viewer',
-            baseURL, 
-            authorizationType, 
-            authorizationKey, 
-            license: ThingsLicense, 
-            sceneName: json.scene_name, 
+            baseURL,
+            authorizationType,
+            authorizationKey,
+            license: ThingsLicense,
+            sceneName: json.scene_name,
             callback: afterSceneLoaded
           })
         });
@@ -117,8 +120,8 @@
 
     fetch(fontApiURL, options).then(response => {
       var contentType = response.headers.get("content-type");
-      if(contentType && contentType.indexOf("application/json") !== -1) {
-        response.json().then(function(json) {
+      if (contentType && contentType.indexOf("application/json") !== -1) {
+        response.json().then(function (json) {
           loadFonts({
             baseURL,
             fonts: json,

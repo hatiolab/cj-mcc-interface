@@ -64,10 +64,21 @@ async function startDataGethering({
     authorizationType
   })
 
+  var mode = data["provider-mode"]
   var interval = data["polling-interval"]
   var variables = data["variables"]
 
   board.data = variables
+
+  if(mode == 'S') {
+    var stompClient = initStomp({
+      url: new URL(`/elidom/stomp`, baseURL).toString(),
+      onConnected: () => {
+        startSubscribe(stompClient, sceneName, board)
+      }
+    })
+    return
+  }
 
   setTimeout(() => {
     startDataGethering({
@@ -111,38 +122,4 @@ async function getInitData({
     }).catch(error => {
       console.error('Error!!!', error)
     })
-
-
-
-
-
-  // var xhr = new XMLHttpRequest();
-
-  // var headers = {
-  //   "Content-Type": 'application/json',
-  //   "Authorization-Type": 'token',
-  //   "Authorization-Key": 'tokenuser'
-  // }
-
-  // xhr.open('GET', pubUrl, true);
-  // // xhr.onloadend = callback;
-  // xhr.onreadystatechange = function (aEvt) {
-  //   if (xhr.readyState == 4) {
-  //     if (xhr.status == 200) {
-  //       var data = typeof xhr.response === 'string' ? JSON.parse(xhr.response) : xhr.response;
-  //       return data
-  //     }
-  //     else
-  //       console.warn(error);
-  //   }
-  // };
-  // // xhr.ontimeout = timeout;
-  // xhr.withCredentials = true;
-  // xhr.responseType = 'json';
-  // xhr.timeout = 30000;
-
-  // for (var header in headers)
-  //   xhr.setRequestHeader(header, headers[header]);
-
-  // xhr.send();
 }
