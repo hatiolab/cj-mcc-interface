@@ -24,111 +24,51 @@
 
 <body>
 
-
   <div id="scene-viewer" class="scene-viewer"></div>
+  
+  <script src="node_modules/webfontloader/webfontloader.js"></script>
+  <script src="node_modules/sockjs-client/dist/sockjs.min.js"></script>
+  <script src="node_modules/stomp-websocket/lib/stomp.min.js"></script>
 
-
-  <script src="/licenses/things-lic.js"></script>
-  <script src="./bower_components/webfontloader/webfontloader.js"></script>
-  <script src="./bower_components/sockjs/sockjs.min.js"></script>
-  <script src="./bower_components/stomp-websocket/lib/stomp.min.js"></script>
-
-  <script src="./bower_components/things-scene/things-scene-min.js"></script>
-  <script src="./bower_components/chart.js/dist/Chart.min.js"></script>
-  <script src="./bower_components/tinycolor2/dist/tinycolor-min.js"></script>
-  <script src="./bower_components/things-scene-chartjs/dist/things-scene-chartjs.js"></script>
-  <script src="./bower_components/things-scene-clock/dist/things-scene-clock.js"></script>
-  <script src="./bower_components/things-scene-clone/dist/things-scene-clone.js"></script>
-  <script src="./bower_components/things-scene-echart/dist/things-scene-echart.js"></script>
-  <script src="./bower_components/things-scene-firebase/dist/things-scene-firebase.js"></script>
-  <script src="./bower_components/things-scene-forklift/dist/things-scene-forklift.js"></script>
-  <script src="./bower_components/things-scene-form/dist/things-scene-form.js"></script>
-  <script src="./bower_components/things-scene-gauge/dist/things-scene-gauge.js"></script>
-  <script src="./bower_components/things-scene-google-map/dist/things-scene-google-map.js"></script>
-  <script src="./bower_components/things-scene-half-roundrect/dist/things-scene-half-roundrect.js"></script>
-  <script src="./bower_components/things-scene-indoor-map/dist/things-scene-indoor-map.js"></script>
-  <script src="./bower_components/things-scene-legend/dist/things-scene-legend.js"></script>
-  <script src="./bower_components/things-scene-marker/dist/things-scene-marker.js"></script>
-  <script src="./bower_components/things-scene-mqtt/dist/things-scene-mqtt.js"></script>
-  <script src="./bower_components/things-scene-person/dist/things-scene-person.js"></script>
-  <script src="./bower_components/things-scene-progressbar/dist/things-scene-progressbar.js"></script>
-  <script src="./bower_components/things-scene-random/dist/things-scene-random.js"></script>
-  <script src="./bower_components/things-scene-restful/dist/things-scene-restful.js"></script>
-  <script src="./bower_components/things-scene-slam/dist/things-scene-slam.js"></script>
-  <script src="./bower_components/things-scene-stomp/dist/things-scene-stomp.js"></script>
-  <script src="./bower_components/things-scene-tab/dist/things-scene-tab.js"></script>
-  <script src="./bower_components/things-scene-table/dist/things-scene-table.js"></script>
-  <script src="./bower_components/things-scene-traffic/dist/things-scene-traffic.js"></script>
-  <script src="./bower_components/things-scene-visualizer/dist/things-scene-visualizer.js"></script>
-  <script src="./bower_components/things-scene-wheel-sorter/dist/things-scene-wheel-sorter.js"></script>
-  <script src="./bower_components/things-board-integration/things-board-integration.js"></script>
-  <script src="./stomp.js"></script>
-  <script src="./font-loader.js"></script>
-  <script src="./integrate.js"></script>
+  <script src="node_modules/@hatiolab/things-scene/things-scene-min.js"></script>
+  <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+  <script src="node_modules/tinycolor2/dist/tinycolor-min.js"></script>
+  <script src="node_modules/@things-scene/chartjs/dist/things-scene-chartjs.js"></script>
+  <script src="node_modules/@things-scene/clock/dist/things-scene-clock.js"></script>
+  <script src="node_modules/@things-scene/clone/dist/things-scene-clone.js"></script>
+  <script src="node_modules/@things-scene/echart/dist/things-scene-echart.js"></script>
+  <script src="node_modules/@things-scene/firebase/dist/things-scene-firebase.js"></script>
+  <script src="node_modules/@things-scene/forklift/dist/things-scene-forklift.js"></script>
+  <script src="node_modules/@things-scene/form/dist/things-scene-form.js"></script>
+  <script src="node_modules/@things-scene/gauge/dist/things-scene-gauge.js"></script>
+  <script src="node_modules/@things-scene/google-map/dist/things-scene-google-map.js"></script>
+  <script src="node_modules/@things-scene/half-roundrect/dist/things-scene-half-roundrect.js"></script>
+  <script src="node_modules/@things-scene/indoor-map/dist/things-scene-indoor-map.js"></script>
+  <script src="node_modules/@things-scene/legend/dist/things-scene-legend.js"></script>
+  <script src="node_modules/@things-scene/marker/dist/things-scene-marker.js"></script>
+  <script src="node_modules/@things-scene/mqtt/dist/things-scene-mqtt.js"></script>
+  <script src="node_modules/@things-scene/person/dist/things-scene-person.js"></script>
+  <script src="node_modules/@things-scene/progressbar/dist/things-scene-progressbar.js"></script>
+  <script src="node_modules/@things-scene/random/dist/things-scene-random.js"></script>
+  <script src="node_modules/@things-scene/restful/dist/things-scene-restful.js"></script>
+  <script src="node_modules/@things-scene/slam/dist/things-scene-slam.js"></script>
+  <script src="node_modules/@things-scene/stomp/dist/things-scene-stomp.js"></script>
+  <script src="node_modules/@things-scene/tab/dist/things-scene-tab.js"></script>
+  <script src="node_modules/@things-scene/table/dist/things-scene-table.js"></script>
+  <script src="node_modules/@things-scene/traffic/dist/things-scene-traffic.js"></script>
+  <script src="node_modules/@things-scene/visualizer/dist/things-scene-visualizer.js"></script>
+  <script src="node_modules/@things-scene/wheel-sorter/dist/things-scene-wheel-sorter.js"></script>
+  <script src="node_modules/@things-scene/things-board-integration/things-board-integration-min.js"></script>
+  
+  <script src="./dist/main.js"></script>
+  <script src="./licenses/things-lic.js"></script>
 
   <script>
-    var fit = 'both'; // 'both', 'ratio', 'center', 'none'
-
-    var baseURL = new URL('http://localhost:9001/rest').toString()
-
-    var authorizationType = 'token';
-    var authorizationKey = '300abb96-8069-48d4-ae07';
-
-    var queryString = location.search;
-
-    var searchParams
-    if (queryString)
-      searchParams = new URLSearchParams(queryString);
-
-    var center = searchParams.get('center')
-    var zone = searchParams.get('zone').toLowerCase()
-
-    var apiURL = new URL(`/rest/scene_mcc_mappings/${center}/${zone}`, baseURL)
-
-    var header = new Headers();
-    header.append("Content-Type", "application/json");
-    header.append("Authorization-Type", authorizationType);
-    header.append("Authorization-Key", authorizationKey);
-
-    var options = {
-      method: "GET",
-      headers: header,
-      credentials: 'include',
-      mode: 'cors'
-    }
-
-    var fontApiURL = new URL('/rest/fonts', baseURL)
-
-    fetch(apiURL, options).then((response) => {
-      var contentType = response.headers.get("content-type");
-      if (contentType && contentType.indexOf("application/json") !== -1) {
-        response.json().then(function (json) {
-          integrate({
-            target: 'scene-viewer',
-            baseURL,
-            authorizationType,
-            authorizationKey,
-            license: ThingsLicense,
-            sceneName: json.scene_name,
-            callback: afterSceneLoaded
-          })
-        });
-      }
-    }).catch(error => {
-      console.error('Error!!!', error)
-    })
-
-    fetch(fontApiURL, options).then(response => {
-      var contentType = response.headers.get("content-type");
-      if (contentType && contentType.indexOf("application/json") !== -1) {
-        response.json().then(function (json) {
-          loadFonts({
-            baseURL,
-            fonts: json,
-            authorizationKey
-          })
-        });
-      }
+    init({
+      baseURL: 'http://192.168.1.27:9001/rest',
+      queryString: location.search,
+      authorizationKey: '300abb96-8069-48d4-ae07',
+      license: ThingsLicense
     })
 
   </script>
