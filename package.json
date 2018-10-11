@@ -55,7 +55,7 @@
     "@things-scene/stomp": "^0.4.0",
     "@things-scene/tab": "^2.3.1",
     "@things-scene/table": "^2.4.1",
-    "@things-scene/things-board-integration": "^2.0.5",
+    "@things-scene/things-board-integration": "^2.0.9",
     "@things-scene/traffic": "^0.4.0",
     "@things-scene/visualizer": "^0.5.12",
     "@things-scene/wheel-sorter": "^2.3.0",
